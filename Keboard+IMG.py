@@ -13,11 +13,6 @@ global img
 
 drone.streamon()  # start stream
 
-def limit():
-    for i in range(0, 10):
-        return i + 1
-
-
 def getKeyboardInput():
     lr, fb, ud, yv = 0, 0, 0, 0
     x = 75
@@ -46,7 +41,7 @@ def getKeyboardInput():
     if kp.getKey("l"): drone.land()
 
     if kp.getKey("z"):
-        cv2.imwrite(f'Resources/photos{limit()}.jpg', img)
+        cv2.imwrite(f'Resources/photos{time.time()}.jpg', img)
         sleep(0.2)
 
     return [lr, fb, ud, yv]
