@@ -1,5 +1,4 @@
 import numpy as np
-
 import KeyPressModule as kp
 from djitellopy import tello
 from time import sleep
@@ -19,7 +18,6 @@ x = 500
 y = 500
 Angle = 0
 yaw = 0
-
 
 kp.init()
 drone = tello.Tello()
@@ -87,7 +85,6 @@ def DrawPoints(img, points):
     cv2.putText(img, f'({(points[-1][0] - 500)/100},{(points[-1][1] - 500)/100})meters',
                 (points[-1][0] + 10, points[-1][1] + 30), cv2.FONT_HERSHEY_PLAIN, 1,
                 (255, 0, 255), 1)
-
 
 while True:
     value = getKeyboardInput()
