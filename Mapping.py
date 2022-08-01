@@ -26,6 +26,7 @@ print('battery is ' + str(drone.get_battery()) + ' %')
 
 points = [(0,0), (0,0)]
 
+
 def getKeyboardInput():
     lr, fb, ud, yv = 0, 0, 0, 0
     speed = 15
@@ -76,6 +77,7 @@ def getKeyboardInput():
     y += int(Distance * math.sin(math.radians(Angle)))
 
     return [lr, fb, ud, yv, x, y]
+
 
 def DrawPoints(img, points):
     for point in points:
